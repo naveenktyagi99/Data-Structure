@@ -184,4 +184,21 @@ public class LinkedList {
         }
         return iterator;
     }
+
+    public Node getNthNodeFromLast(int indexFromEnd) {
+        Node iterator = start;
+        Node forward_Pointer = start;
+        int count = 1;
+        while (forward_Pointer != null && count != indexFromEnd) {
+            forward_Pointer = forward_Pointer.getNext();
+            count = count + 1;
+        }
+        if (forward_Pointer == null)
+            return null;
+        while (forward_Pointer.getNext() != null) {
+            forward_Pointer = forward_Pointer.getNext();
+            iterator = iterator.getNext();
+        }
+        return iterator;
+    }
 }
