@@ -30,6 +30,5 @@ public class ReverseLinkedList {
             System.out.println(iterator.getData());
             iterator = iterator.getNext();
         }
-
     }
 }
