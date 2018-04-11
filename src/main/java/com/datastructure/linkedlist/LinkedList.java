@@ -201,4 +201,13 @@ public class LinkedList {
         }
         return iterator;
     }
+
+    public static LinkedList getLinkedListWithdata(int num) {
+
+        LinkedList list = new LinkedList(0);
+        for (int i = 1; i < num; i++)
+            list.add(i);
+        return list;
+
+    }
 }
