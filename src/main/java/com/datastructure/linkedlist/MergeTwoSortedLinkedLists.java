@@ -4,16 +4,13 @@ import com.datastructure.model.Node;
 
 public class MergeTwoSortedLinkedLists {
 
-
-
     public Node mergeList(LinkedList list1, LinkedList list2) {
 
-
         Node iterator1 = list1.getStart();
-
         Node iterator2 = list2.getStart();
         Node mergeStart = null;
         Node mergeIterator = null;
+
         while (iterator1 != null && iterator2 != null) {
             if (iterator1 != null && iterator2 != null) {
                 if (iterator1.getData() <= iterator2.getData()) {

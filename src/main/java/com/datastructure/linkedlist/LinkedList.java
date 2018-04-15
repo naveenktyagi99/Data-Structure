@@ -210,4 +210,13 @@ public class LinkedList {
         return list;
 
     }
+
+    public  Node getLastNode(){
+
+        Node iterator = this.getStart();
+        while(iterator.getNext()!=null){
+            iterator = iterator.getNext();
+        }
+        return  iterator;
+    }
 }
