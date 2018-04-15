@@ -211,12 +211,12 @@ public class LinkedList {
 
     }
 
-    public  Node getLastNode(){
+    public Node getLastNode() {
 
         Node iterator = this.getStart();
-        while(iterator.getNext()!=null){
+        while (iterator.getNext() != null) {
             iterator = iterator.getNext();
         }
-        return  iterator;
+        return iterator;
     }
 }

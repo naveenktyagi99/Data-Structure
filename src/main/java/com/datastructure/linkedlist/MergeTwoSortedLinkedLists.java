@@ -15,7 +15,7 @@ public class MergeTwoSortedLinkedLists {
             if (iterator1 != null && iterator2 != null) {
                 if (iterator1.getData() <= iterator2.getData()) {
                     Node currentNode = new Node(iterator1.getData(), null);
-                    if(mergeStart==null) {
+                    if (mergeStart == null) {
                         mergeStart = currentNode;
                         mergeIterator = mergeStart;
                         iterator1 = iterator1.getNext();
@@ -26,7 +26,7 @@ public class MergeTwoSortedLinkedLists {
                 } else {
                     Node currentNode = new Node(iterator2.getData(), null);
 
-                    if(mergeStart==null) {
+                    if (mergeStart == null) {
                         mergeStart = currentNode;
                         mergeIterator = mergeStart;
                         iterator2 = iterator2.getNext();
@@ -52,14 +52,13 @@ public class MergeTwoSortedLinkedLists {
         return mergeStart;
     }
 
-    public static void main(String arr[]){
+    public static void main(String arr[]) {
         MergeTwoSortedLinkedLists mergeTwoSortedLinkedLists = new MergeTwoSortedLinkedLists();
 
         LinkedList list1 = new LinkedList(1);
         list1.add(2);
         list1.add(14);
         list1.add(19);
-
 
         LinkedList list2 = new LinkedList(6);
         list2.add(7);
@@ -69,7 +68,7 @@ public class MergeTwoSortedLinkedLists {
         list2.add(25);
 
         Node mergeList = mergeTwoSortedLinkedLists.mergeList(list1, list2);
-        while(mergeList!=null){
+        while (mergeList != null) {
             System.out.println(mergeList.getData());
             mergeList = mergeList.getNext();
         }

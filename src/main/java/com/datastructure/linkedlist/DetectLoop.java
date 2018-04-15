@@ -7,11 +7,11 @@ import java.util.Set;
 
 public class DetectLoop {
 
-    public boolean findLoop(LinkedList list){
+    public boolean findLoop(LinkedList list) {
         Set<Node> hashTable = new LinkedHashSet<Node>();
         Node iterator = list.getStart();
-        while(iterator!=null){
-            if(hashTable.contains(iterator))
+        while (iterator != null) {
+            if (hashTable.contains(iterator))
                 return true;
             hashTable.add(iterator);
             iterator = iterator.getNext();
@@ -19,11 +19,11 @@ public class DetectLoop {
         return false;
     }
 
-    public static void main(String arr[]){
+    public static void main(String arr[]) {
         LinkedList list = LinkedList.getLinkedListWithdata(5);
         DetectLoop detectLoop = new DetectLoop();
         Node iterator = list.getStart();
-        while(iterator.getNext()!=null){
+        while (iterator.getNext() != null) {
             iterator = iterator.getNext();
         }
         iterator.setNext(list.getStart());

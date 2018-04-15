@@ -23,36 +23,22 @@ public class IntersectionPointOfTwoLinkedLists {
                 commonNode.add(iterator2);
                 iterator1 = iterator1.getNext();
                 iterator2 = iterator2.getNext();
-
             }
         }
         return null;
-
     }
 
     public static void main(String arr[]) {
-        LinkedList list = new LinkedList(0);
-        list.add(1);
-        list.add(2);
-        list.add(3);
-        list.add(4);
-        list.add(5);
-        list.add(6);
 
-        LinkedList list2 = new LinkedList(10);
-        list2.add(10);
-        list2.add(10);
-        list2.add(10);
-        list2.add(10);
-        list2.add(10);
-
+        LinkedList list = LinkedList.getLinkedListWithdata(5);
+        LinkedList list2 =  LinkedList.getLinkedListWithdata(5);
 
         Node lastNode = list2.getLastNode();
-
         lastNode.setNext(list.getStart().getNext().getNext().getNext());
 
         IntersectionPointOfTwoLinkedLists intersectionPointOfTwoLinkedLists = new IntersectionPointOfTwoLinkedLists();
         Node commonNode = intersectionPointOfTwoLinkedLists.interactionPoint(list, list2);
+
         System.out.println("Intersection Point Of Two LinkedLists: " + commonNode.getData());
     }
 }
