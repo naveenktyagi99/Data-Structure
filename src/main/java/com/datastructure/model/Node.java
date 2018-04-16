@@ -5,9 +5,10 @@ public class Node {
     private int data;
     private Node next;
 
-    public  Node(){}
+    public Node() {
+    }
 
-    public Node(int data, Node next){
+    public Node(int data, Node next) {
         this.data = data;
         this.next = next;
     }
@@ -26,5 +27,22 @@ public class Node {
 
     public void setNext(Node next) {
         this.next = next;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        Node object = (Node) o;
+        if (o == null)
+            return false;
+        else {
+            if (object.getData() == this.getData())
+                return true;
+            return false;
+        }
+    }
+
+    @Override
+    public int hashCode() {
+        return 31 * data;
     }
 }
