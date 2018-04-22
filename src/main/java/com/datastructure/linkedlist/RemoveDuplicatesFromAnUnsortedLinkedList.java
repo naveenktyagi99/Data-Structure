@@ -1,9 +1,7 @@
 package com.datastructure.linkedlist;
 
 import com.datastructure.model.Node;
-
 import java.util.HashSet;
-import java.util.Set;
 
 public class RemoveDuplicatesFromAnUnsortedLinkedList {
 
