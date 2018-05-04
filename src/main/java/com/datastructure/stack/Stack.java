@@ -42,6 +42,8 @@ public class Stack {
         return false;
     }
 
+
+
     public static void main(String arr[]) {
 
         Stack stack = new Stack();
